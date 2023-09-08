@@ -13,7 +13,7 @@ import imageio
 
 # データの読み込み
 def load_data():
-    return pd.read_csv('data/data.csv')
+    return pd.read_csv('data/data_bh.csv')
 
 df = load_data()
 df['timeStamp'] = pd.to_datetime(df['timeStamp'])
@@ -130,8 +130,8 @@ fig.update_layout(scene=dict(
     aspectmode='manual',
     aspectratio=dict(x=1, y=1, z=2)
 ),
-width=1000, 
-height=1500  
+width=1000,
+height=1500
 )
 
 st.plotly_chart(fig, use_container_width=True)
